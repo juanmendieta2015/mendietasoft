@@ -15,14 +15,32 @@ footer {
 	font-size: 0.9em;
 }
 
+
+
+/**************** Menu ******************/
+
 #main-menu {
 	margin-left: 80px;
 	margin-right: 80px;
 }
 
+/*Posiciona la info de contacto en el menu*/
+
+.navbar-center
+{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    /*text-align: center;*/
+    margin-left: 30%;
+}
+
+/**************** /Menu ******************/
 
 
-/************** Imagenes **************/
+
+/**************** Imagenes ***************/
 
 .image {
 	position: relative;
@@ -69,6 +87,6 @@ footer {
 	color: #cccccc;
 }
 
-/****************************************/
+/**************** /Imagenes ***************/
 
 
