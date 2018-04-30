@@ -1,0 +1,74 @@
+body { 
+	padding-top: 50px; 
+}
+
+.content {
+	text-align: center;
+	background-color: #dddddd;
+}
+
+footer {
+	background-color: #111111;
+	color: #aaaaaa;
+	text-align: center;
+	padding: 10px;
+	font-size: 0.9em;
+}
+
+#main-menu {
+	margin-left: 80px;
+	margin-right: 80px;
+}
+
+
+
+/************** Imagenes **************/
+
+.image {
+	position: relative;
+	background-attachment: fixed;
+}
+
+
+
+/*Imagen1*/
+
+#image1 {
+	background-image: url(../images/image-a.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+
+#image1 h1{
+	position: absolute;
+	text-align: center;
+	left: 0; right: 0; top: 0; bottom: 0;
+	margin: auto;
+	display: block;
+	height: 10px;
+	font-size: 4em;
+}
+
+
+
+/*Imagen 2*/
+
+#image2 {
+	background-image: url(../images/image-b.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+
+#fondo {
+	background-color: rgba(0,0,0,0.70);
+	position: absolute;
+	margin-top: 40vh;
+	padding: 25px;
+	color: #cccccc;
+}
+
+/****************************************/
+
+
