@@ -29,7 +29,7 @@
 
 				<div class="col-xs-12">
 
-					<nav class="navbar navbar-default navbar-fixed-top navbar-custom" >
+					<nav class="navbar navbar-default navbar-fixed-top" >
 
 						<div id="main-menu">
 					  
@@ -65,10 +65,10 @@
 						    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
 						      <ul class="nav navbar-nav navbar-right">
-						        <li><a href="#inicio">Inicio</a></li>
-						        <li><a href="#servicios">Servicios</a></li>
-						        <li><a href="#quienes-somos">¿Quiénes Somos?</a></li>
-						        <li><a href="#contactenos">Contáctenos</a></li>
+						        <li><a href="#inicio"  data-ancla="inicio">Inicio</a></li>
+						        <li><a href="#servicios" data-ancla="servicios">Servicios</a></li>
+						        <li><a href="#quienes-somos" data-ancla="quienes-somos">¿Quiénes Somos?</a></li>
+						        <li><a href="#contactenos" data-ancla="contactenos">Contáctenos</a></li>
 						      </ul>
 
 						    </div><!-- /.navbar-collapse -->
@@ -92,23 +92,40 @@
 	<!-- Imagen 1 -->
 	
 	<section class="image img-responsive" id="image1" data-stellar-background-ratio="0.30" >
-		<h1>
-			Lorem ipsum dolor sit amet
-		</h1>		
+		<div class="main-title">
+			<h1>
+				Creación Profesional de Páginas Webs, Programas y Aplicaciones para Dispositivos Móviles.
+			</h1>		
+		</div>			
 	</section>
 
+
+	<!-- Nuestros Servicios -->
+
 	<div class="container content" id="servicios">
-
-
-		<!-- Nuestros Servicios -->
 
 		<section class="row">
 			<div class="col-xs-12">
 				<article>
 					<h2><i class="fas fa-suitcase"></i> Nuestros Servicios </i></h2>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper odio in erat malesuada, ut dictum justo posuere. Ut eu arcu nisi. In sed sagittis nunc, sed pellentesque mi. Praesent semper turpis feugiat ultrices porttitor. Sed a sapien at elit pharetra hendrerit. Donec vel ullamcorper dui. Aliquam placerat arcu non malesuada consequat. Donec dignissim justo vitae pharetra tincidunt. Vestibulum aliquam fermentum felis nec mattis. Cras risus ligula, posuere id urna a, convallis mollis nisl. Vivamus viverra ipsum sem, vel lacinia purus varius eu.		
-					</p>		
+					<div class="text-justify">
+						<p>
+							Nuestro portafolio de servicios abarca todo lo relacionado con el Desarrollo de Software haciendo principal hincapié en el mundo web.
+							Creamos diferentes soluciones de software según sus requerimientos como los que se detallan a continuación:
+							<ul>
+								<li>Páginas Webs 1.0 y 2.0 (*)</li>
+								<li>Programas/Sistemas Webs o de Escritorio (Sin conexion a internet, Offline)</li>
+								<li>Aplicaciones para dispositivos Moviles basado en Androide OS</li>
+							</ul>	
+							</p>
+						<p>
+							Nos ajustamos según su presupuesto, ya sea que necesite una sencilla Página Web Informativa para su negocio que acaba de empezar o una Aplicación de Ventas Online hecha a medida de sus necesidades. Lo asesoraremos a usted en base a sus requerimientos y presupuesto para poder ofrecerle la solución más adecuada para su caso en particular. Contáctenos sin compromiso para una atención más personalizada y poder atenderlo mejor. 
+						</p>
+						<blockquote>
+								<footer>(*) 1.0 Son páginas basados principalmente en HTML, su objetivo es netamente informativo/promocional y no incluyen Bases de Datos. Ideal para pequeña empresa que desean dar su primer paso para tener presencia en Internet (se las denomina "Páginas Estáticas" porque son relativamente sencillas). Mientras que 2.0 Son páginas mas avanzadas que ademas del HTML, requieren tecnologias de Bases de Datos como por ejemplo MySQL (se las denominan "Páginas Dinámicas")</footer>
+							</blockquote>						
+					</div>
+							
 				</article>
 			</div>
 		</section>
@@ -123,8 +140,8 @@
 			<div class="col-xs-12 col-md-4">
 				<article>
 					<h2><i class="fas fa-code"></i> Desarrollo Web</h2>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper odio in erat malesuada, ut dictum justo posuere. Ut eu arcu nisi. In sed sagittis nunc, sed pellentesque mi. Praesent semper turpis feugiat ultrices porttitor. Sed a sapien at elit pharetra hendrerit. Donec vel ullamcorper dui. Aliquam placerat arcu non malesuada consequat. Donec dignissim justo vitae pharetra tincidunt. Vestibulum aliquam fermentum felis nec mattis. Cras risus ligula, posuere id urna a, convallis mollis nisl. Vivamus viverra ipsum sem, vel lacinia purus varius eu.		
+					<p class="text-justify">
+						Desarrollamos sitios/páginas webs ya sean de tipo básica, mediana o con acceso a Bases de Datos. Nuestro mercado esta principalmente dirigido  a  PYMES que desean dar un impulso a su emprendimiento o negocio.	
 					</p>
 				</article>
 			</div>
@@ -136,8 +153,8 @@
 			<div class="col-xs-12 col-md-4">
 				<article>
 					<h2> <i class="fab fa-android"></i> Aplicaciones Móviles</h2>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper odio in erat malesuada, ut dictum justo posuere. Ut eu arcu nisi. In sed sagittis nunc, sed pellentesque mi. Praesent semper turpis feugiat ultrices porttitor. Sed a sapien at elit pharetra hendrerit. Donec vel ullamcorper dui. Aliquam placerat arcu non malesuada consequat. Donec dignissim justo vitae pharetra tincidunt. Vestibulum aliquam fermentum felis nec mattis. Cras risus ligula, posuere id urna a, convallis mollis nisl. Vivamus viverra ipsum sem, vel lacinia purus varius eu.		
+					<p class="text-justify">
+						Desarrollamos Aplicaciones para dispositivos móviles basados en Androide OS ya sea de tipo básico o con acceso a Base de Datos.	
 					</p>
 				</article>
 			</div>
@@ -150,8 +167,8 @@
 				<div class="col-xs-12 col-md-4">
 					<article>
 						<h2> <i class="fas fa-paint-brush"></i> Diseño Gráfico</h2>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper odio in erat malesuada, ut dictum justo posuere. Ut eu arcu nisi. In sed sagittis nunc, sed pellentesque mi. Praesent semper turpis feugiat ultrices porttitor. Sed a sapien at elit pharetra hendrerit. Donec vel ullamcorper dui. Aliquam placerat arcu non malesuada consequat. Donec dignissim justo vitae pharetra tincidunt. Vestibulum aliquam fermentum felis nec mattis. Cras risus ligula, posuere id urna a, convallis mollis nisl. Vivamus viverra ipsum sem, vel lacinia purus varius eu.		
+						<p class="text-justify">
+							Contamos con expertos en el arte del diseño para atender todos sus requerimientos.		
 						</p>
 					</article>
 				</div>
@@ -165,12 +182,12 @@
 		<!-- Imagen 2 -->
 
 		<section class="image" id="image2" data-stellar-background-ratio="0.30">
-			<div id="fondo">
+			<div class="fondo">
 				<h2 id="quienes-somos">
-					Lorem ipsum dolor sit amet
+					¿Quiénes somos?
 				</h2>	
-				<h3>
-					Ut eu arcu nisi. In sed sagittis nunc, sed pellentesque mi. Praesent semper turpis feugiat ultrices porttitor. Sed a sapien at elit pharetra hendrerit. Donec vel ullamcorper dui. Aliquam placerat arcu non malesuada consequat. Donec dignissim justo vitae pharetra tincidunt. Vestibulum aliquam fermentum felis nec mattis.				
+				<h3 class="text-justify">
+					Somos un equipo de profesionales especializados en el diseño y desarrollo web, estamos ubicados en el Cantón La Libertad – Provincia de Santa Elena. Nos encontramos en constante evolución, investigamos las últimas tendencias en la industria para mantenernos a la vanguardia y poderles ofrecer a ustedes una solución web a la altura de sus necesidades.				
 				</h3>
 			</div>
 		</section>
@@ -184,7 +201,7 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<div>
-						<h2 id="contactenos">Contáctenos</h2>
+						<h2 id="contactenos" id="contactenos">Contáctenos</h2>
 							<p>	
 								<i class="fas fa-map-marker-alt"></i>  La Libertad, Barrio Eugenio Espejo, Avenida 22 y Calle 15. Provincia de Santa Elena, Ecuador <br>
 								<i class="fas fa-phone"></i>  (04) 278-0870  | 
@@ -211,7 +228,7 @@
 				<div class="col-xs-12 col-md-6">
 					<div class="row">
 						<div class="col-xs-12 ">
-						    <form id="form_contact">					    	
+						    <form id="form_contact" method="post">					    	
 						    	<div class="form-group">
 						        	<label class="sr-only">Name:</label>
 						        	<input type="text" name="name" id="name" class="form-control" placeholder="Sus Nombres" required>
@@ -260,7 +277,7 @@
 
 	<!-- Footer -->
 
-	<footer>
+	<footer class="footer-custom">
 		MENDIETA. Todos los derechos reservados ©  2018
 	</footer>		
 

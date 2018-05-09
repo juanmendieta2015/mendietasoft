@@ -1,30 +1,8 @@
-// $(function(){
-
-//      $('a[href*=#]').click(function() {
-
-//      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-//          && location.hostname == this.hostname) {
-
-//              var $target = $(this.hash);
-
-//              $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-
-//              if ($target.length) {
-
-//                  var targetOffset = $target.offset().top;
-
-//                  $('html,body').animate({scrollTop: targetOffset}, 1000);
-
-//                  return false;
-
-//             }
-
-//        }
-
-//    });
-
-// });
-
+const ERROR_EMAIL 		= "Por favor verifique su E-mail, al parecer esta incorrecto.";
+const ERROR_MESSAGE 	= "Ha ocurrido un error, su mensaje no se ha enviado. Por favor intente de nuevo.";
+const SUCCESS_MESSAGE 	= "¡Gracias por escribirnos!. Te contactaremos cuanto antes!. :)";
+const ERROR_VALIDATION 	= "Ha ocurrido un error de validacion, por favor verifique sus datos.";
+const ERROR_SERVIDOR 	= "No se ha podido establecer conexión con el servidor.";
 
 var x;
 x = $(document);
@@ -47,34 +25,15 @@ function inicializar()
     btnSend.click(send);
 
 
-
-
-   //   $('a[href*=#]').click(function() {
-
-   //   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-   //       && location.hostname == this.hostname) {
-
-   //           var $target = $(this.hash);
-
-   //           $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-
-   //           if ($target.length) {
-
-   //               var targetOffset = $target.offset().top;
-
-   //               $('html,body').animate({scrollTop: targetOffset}, 1000);
-
-   //               return false;
-
-   //          }
-
-   //     }
-
-   // });
-
+	$("li a").click(function(e){				
+		e.preventDefault();		//evitar el eventos del enlace normal
+		var strAncla=$(this).attr('href'); //id del ancla
+			$('body,html').stop(true,true).animate({				
+				scrollTop: $(strAncla).offset().top
+			},1000);
+		
+	});
      
-
-
 }
 
 
@@ -101,7 +60,7 @@ function send()
 	    					'<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
 	    						'<span aria-hidden="true">&times;</span>' + 
 	    					'</button>' +
-	    					'<strong>Error! </strong>Por favor verifique su E-mail, al parecer esta incorrecto' +
+	    					'<strong>Error! </strong>' + ERROR_EMAIL +
 	    				'</div>';
 	    $("#resultado").html(response);     	
     	return false;
@@ -124,7 +83,7 @@ function send()
         error: problemas
     });
 
-    
+
 
     // Limpia todos los campos de formulario
     document.getElementById("form_contact").reset();
@@ -158,7 +117,7 @@ function llegada(datos)
 		    					'<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
 		    						'<span aria-hidden="true">&times;</span>' +
 		    					'</button>' +
-		    					'<strong>Error! </strong>Ha ocurrido un error, su mensaje no se ha enviado. Por favor intente de nuevo.' +
+		    					'<strong>Error! </strong>' + ERROR_MESSAGE +
 		    				'</div>';
 
 		    $("#resultado").html(response); 
@@ -172,7 +131,7 @@ function llegada(datos)
 		    					'<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
 		    						'<span aria-hidden="true">&times;</span>' +
 		    					'</button>' +
-		    					'Gracias por escribirnos. Pronto te contactaremos. ' +
+		    					SUCCESS_MESSAGE +
 		    				'</div>';
 
 		    $("#resultado").html(response);
@@ -186,7 +145,7 @@ function llegada(datos)
 		    					'<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
 		    						'<span aria-hidden="true">&times;</span>' +
 		    					'</button>' +
-		    					'<strong>Error! </strong>Ha ocurrido un error de validacion, por favor verifique sus datos.' +
+		    					'<strong>Error! </strong>' + ERROR_VALIDATION +
 		    				'</div>';
 
 		    $("#resultado").html(response);
@@ -206,7 +165,7 @@ function problemas()
     							'<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
     								'<span aria-hidden="true">&times;</span>' +
     							'</button>' +
-    							'<strong>Error! </strong>No se ha podido establecer conexion con el servidor.' +
+    							'<strong>Error! </strong>' + ERROR_SERVIDOR +
     						'</div>';
     $("#resultado").html(response_success)  
 }            
