@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<title>Mendietasoft</title>    
+	<title>MENDIETA</title>    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Latest compiled and minified JavaScript -->
@@ -9,10 +9,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.js" ></script>
     <script type="text/javascript" src="js/jquery.stellar.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-	<link rel="icon" href="images/favicon.png">
+
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
 	<link href="css/styles.css" rel="stylesheet" type="text/css">
 	
+
 </head>
 <body>
 
@@ -22,11 +25,11 @@
 
 		<div class="container">
 
-			<div class="row">
+			<div class="row" id="inicio">
 
 				<div class="col-xs-12">
 
-					<nav class="navbar navbar-default navbar-fixed-top" >
+					<nav class="navbar navbar-default navbar-fixed-top navbar-custom" >
 
 						<div id="main-menu">
 					  
@@ -42,17 +45,18 @@
 						        <span class="icon-bar"></span>
 						        <span class="icon-bar"></span>
 						      </button>
-						      <a class="navbar-brand" href="#">MENDIETASOFT</a>
+						      <a class="navbar-brand" href="#">MENDIETA <!-- <span>Web Solutions</span> --></a>
 						    </div>
 
 
 							<!-- Info de Contacto -->
 
 							<p class="navbar-text ">
-								<i class="fas fa-map-marker-alt"></i> La Libertad, Provincia de Santa Elena | 
+								<i class="fas fa-map-marker-alt"></i> La Libertad, Ecuador | 
+
 								<i class="fas fa-phone"></i>  (04) 278-0870 | 
-								<i class="fas fa-mobile-alt"></i>  (593) 099-362-9674  
-								<i class="fab fa-whatsapp"></i>
+								<i class="fas fa-mobile-alt"></i>  <i class="fab fa-whatsapp"></i> (593) 099-362-9674 					
+
 							</p>
 
 
@@ -61,8 +65,8 @@
 						    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
 						      <ul class="nav navbar-nav navbar-right">
-						        <li><a href="##Inicio">Inicio</a></li>
-						        <li><a href="##servicios">Servicios</a></li>
+						        <li><a href="#inicio">Inicio</a></li>
+						        <li><a href="#servicios">Servicios</a></li>
 						        <li><a href="#quienes-somos">¿Quiénes Somos?</a></li>
 						        <li><a href="#contactenos">Contáctenos</a></li>
 						      </ul>
@@ -70,9 +74,10 @@
 						    </div><!-- /.navbar-collapse -->
 
 						  </div><!-- /.container-fluid -->
-						</div>
 
-					</nav>
+						</div>	
+
+					</nav> 
 
 				</div>
 
@@ -86,13 +91,13 @@
 
 	<!-- Imagen 1 -->
 	
-	<section class="image" id="image1" data-stellar-background-ratio="0.30">
+	<section class="image img-responsive" id="image1" data-stellar-background-ratio="0.30" >
 		<h1>
 			Lorem ipsum dolor sit amet
 		</h1>		
 	</section>
 
-	<div class="container content">
+	<div class="container content" id="servicios">
 
 
 		<!-- Nuestros Servicios -->
@@ -100,7 +105,6 @@
 		<section class="row">
 			<div class="col-xs-12">
 				<article>
-					<a name="servicios"></a>
 					<h2><i class="fas fa-suitcase"></i> Nuestros Servicios </i></h2>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper odio in erat malesuada, ut dictum justo posuere. Ut eu arcu nisi. In sed sagittis nunc, sed pellentesque mi. Praesent semper turpis feugiat ultrices porttitor. Sed a sapien at elit pharetra hendrerit. Donec vel ullamcorper dui. Aliquam placerat arcu non malesuada consequat. Donec dignissim justo vitae pharetra tincidunt. Vestibulum aliquam fermentum felis nec mattis. Cras risus ligula, posuere id urna a, convallis mollis nisl. Vivamus viverra ipsum sem, vel lacinia purus varius eu.		
@@ -162,7 +166,7 @@
 
 		<section class="image" id="image2" data-stellar-background-ratio="0.30">
 			<div id="fondo">
-				<h2>
+				<h2 id="quienes-somos">
 					Lorem ipsum dolor sit amet
 				</h2>	
 				<h3>
@@ -180,11 +184,11 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<div>
-						<h2>Contáctenos</h2>
+						<h2 id="contactenos">Contáctenos</h2>
 							<p>	
 								<i class="fas fa-map-marker-alt"></i>  La Libertad, Barrio Eugenio Espejo, Avenida 22 y Calle 15. Provincia de Santa Elena, Ecuador <br>
 								<i class="fas fa-phone"></i>  (04) 278-0870  | 
-								<i class="fas fa-mobile-alt"></i>  (593) 099-362-9674 <i class="fab fa-whatsapp"></i>
+								<i class="fas fa-mobile-alt"></i>  <i class="fab fa-whatsapp"></i> (593) 099-362-9674 
 							</p>	
 					</div>
 				</div>
@@ -197,8 +201,9 @@
 
 				<div class="col-xs-12 col-md-6">
 					
-					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6727.866422774898!2d-80.92065171706369!3d-2.234269042490326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sec!4v1525125762813" width="550" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d31894.29792324762!2d-80.91592984550776!3d-2.2335067203773247!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sec!4v1525836572295" width = "100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>		
 
+					<!-- width="550" height="350"			 -->
 				</div>
 				
 				<!-- Formulario de Contacto -->
@@ -206,7 +211,7 @@
 				<div class="col-xs-12 col-md-6">
 					<div class="row">
 						<div class="col-xs-12 ">
-						    <form id="form_contact" action="send_email.php" method="post">					    	
+						    <form id="form_contact">					    	
 						    	<div class="form-group">
 						        	<label class="sr-only">Name:</label>
 						        	<input type="text" name="name" id="name" class="form-control" placeholder="Sus Nombres" required>
@@ -256,7 +261,7 @@
 	<!-- Footer -->
 
 	<footer>
-		MENDIETASOFT. Todos los derechos reservados ©  2018
+		MENDIETA. Todos los derechos reservados ©  2018
 	</footer>		
 
 	<script type="text/javascript" src="js/main.js"></script>	

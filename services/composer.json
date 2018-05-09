@@ -1,0 +1,6 @@
+{
+	"name": "Formulario de Contacto",
+	"require": {
+		"sendgrid/sendgrid": "~6.2"
+	}
+}

@@ -5,6 +5,7 @@ body {
 .content {
 	text-align: center;
 	background-color: #dddddd;
+	/*background-color: #ff6600;*/
 }
 
 footer {
@@ -45,6 +46,8 @@ footer {
 .image {
 	position: relative;
 	background-attachment: fixed;
+/*	width: 100%;
+	height: auto;*/
 }
 
 
@@ -53,6 +56,8 @@ footer {
 
 #image1 {
 	background-image: url(../images/image-a.jpg);
+	/*background: url(?holder.js/600x200);*/
+	/*background-image: url(?holder.js/600x200);*/
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 100vh;
@@ -89,4 +94,29 @@ footer {
 
 /**************** /Imagenes ***************/
 
+.navbar-brand span {
+	display: block;
+	font-size: 0.8em;
+	/*color: red;*/
+}
 
+.navbar-custom {
+    /*background-color:#ff6600;*/
+    /*color:red;	*/
+    /*color: red;*/
+    color: blue;
+}
+
+.loader {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
