@@ -1,4 +1,4 @@
 <?php
-	define("SENDGRID_API_KEY", "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");
+	define("SENDGRID_API_KEY", "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");
     define("TO_NAME", "Juan Mendieta");
     define("TO_EMAIL", "juanmsn@live.com");	

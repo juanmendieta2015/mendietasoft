@@ -287,3 +287,32 @@
 	<script type="text/javascript" src="js/main.js"></script>	
 </body>
 </html>
+
+<?php
+    date_default_timezone_set('America/Guayaquil');
+    $date       = date("Y-m-d H:i:s");
+    $ip_address = $_SERVER['REMOTE_ADDR'];
+    $browser = $_SERVER['HTTP_USER_AGENT'];
+
+
+    $txt = "
+        Fecha\t\t\t\t: {$date}
+        Direccion Ip\t\t: {$ip_address}
+        browser\t\t\t\t: {$browser}
+        \n
+    ";
+
+	log_save($txt);
+
+    
+    // Guarda un archivo de log
+
+    function log_save($txt)
+    {
+        $myfile = fopen("visitor_logs.txt", "a") or die("Unable to open file!");
+        fwrite($myfile, $txt);
+        fclose($myfile);
+        return true;        
+    } 
+
+?>

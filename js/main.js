@@ -33,8 +33,27 @@ function inicializar()
 			},1000);
 		
 	});
+
+
+	// Boton "Enviar Mensaje" habilitar/desahibilitar
+
+	btnSend.prop('disabled', true);
+	$('input,textarea').keyup(function() {
+		if ( $('#name').val().length > 0 
+			&& $('#email').val().length > 0  
+			&& $('#telephone').val().length > 0 
+			&& $('#message').val().length > 0 
+		) {
+		   btnSend.prop('disabled', false);
+		} else{
+		   btnSend.prop('disabled', true);
+
+		}
+	});	
+
      
 }
+
 
 
 // Invoca el servicio para enviar el email
