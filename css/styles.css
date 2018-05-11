@@ -1,19 +1,42 @@
 body { 
-	padding-top: 50px; 
+	/*padding-top: 50px; */
+	/*background-color: rgba(23, 86, 118, 0.6);*/
+	/*background-color: rgba(229, 88, 18, 0.30);	*/
+	/*background-color: #D6FFB7;*/
+	/*background-color: #F5FF90;*/
+	/*background-color: #080357;*/
+	/*background-color: #FFC15E;*/
+	background-color: #ddd;
+
 }
 
 .content {
 	text-align: center;
-	background-color: #dddddd;
-	/*background-color: #ff6600;*/
+	/*background-color: #dddddd;*/
+	/*background-color: #177E89;*/
+	/*background-color: rgba(229, 88, 18, 0.9);	*/
+	/*background-color: rgba(23, 86, 118, 0.10);*/
+	/*background-color: #F5FF90;*/
+	/*background-color: #D6FFB7;*/
+	/*background-color: #FFC15E;*/
+	background-color: #fff;
+
+	/*border: 1px solid #777;*/
+	/*border: 1px solid #E55812;*/
+	box-shadow: 0px 0px 7px 2px #888888 ;
+	/*margin-top: 20px;*/
+	border-radius: 5px;
+
+
 }
 
 .footer-custom {
-	background-color: #111111;
+	background-color: #000;
 	color: #aaaaaa;
 	text-align: center;
 	padding: 10px;
 	font-size: 0.9em;
+	margin-top: 20px;
 }
 
 
@@ -52,6 +75,8 @@ body {
 .image {
 	position: relative;
 	background-attachment: fixed;
+	box-shadow: 0px 0px 10px 3px #888888 ;
+
 }
 
 
@@ -71,15 +96,18 @@ body {
 	margin: auto;
 	display: block;
 	height: 10px;
-	font-size: 4em;
+	/*font-size: 1em;*/
 }
+
 
 
 /*Titulo Principal de Inicio*/
 
 .main-title {
-	text-shadow: 0px 0px 15px  #ffffff;
-	color: #000000;	
+	text-shadow: 0px 0px 10px rgba(255,255,255,0.95);
+	/*color: #000000;	*/
+	/*box-shadow: 0px 0px 50px 100px #000 ;*/
+	color: #000;	
 }
 
 
@@ -90,6 +118,7 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 100vh;
+	border-radius: 8px;
 }
 
 .fondo {
@@ -115,4 +144,45 @@ body {
     animation: spin 2s linear infinite;
 }
 
+.development{
+	background-color: rgba(23, 86, 118, 0.5);
+}
 
+.design{
+	background-color: rgba(229, 88, 18, 0.5);
+}
+
+.our-services{
+	/*background-color: rgba(23, 126, 137, 0.2);*/
+	/*background-color: rgba(23, 86, 118, 0.25);*/
+	/*padding: 20px;*/
+}
+
+.contact-us{
+	/*background-color: rgba(23, 126, 137, 0.2);*/
+	/*background-color: rgba(229, 88, 18, 0.5)*/
+	/*padding: 20px;*/
+}
+
+.subtitle {
+	/*color: #080357;*/
+	color: #E55812;
+}
+
+.contorno {
+	box-shadow: 0px 0px 7px 1px #888 ;
+	border-radius: 5px;	
+	padding: 15px;
+	margin: 20px 0px;
+	/*background-color: #fff;*/
+}
+
+
+/*Colores
+
+DB5461 DARK TERRA COTTA
+175676 BLUE SAPPHIRE
+000000 REGISTRATION BLACK
+177E89 METALLIC SEAWEED
+E55812 FLAME
+*/

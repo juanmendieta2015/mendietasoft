@@ -29,7 +29,7 @@
 
 				<div class="col-xs-12">
 
-					<nav class="navbar navbar-default navbar-fixed-top" >
+					<nav class="navbar navbar-inverse navbar-fixed-top" >
 
 						<div id="main-menu">
 					  
@@ -50,15 +50,13 @@
 
 
 							<!-- Info de Contacto -->
-
+<!-- 
 							<p class="navbar-text ">
 								<i class="fas fa-map-marker-alt"></i> La Libertad, Ecuador | 
-
 								<i class="fas fa-phone"></i>  (04) 278-0870 | 
 								<i class="fas fa-mobile-alt"></i>  <i class="fab fa-whatsapp"></i> (593) 099-362-9674 					
-
 							</p>
-
+ -->
 
 						    <!-- Opciones de Menu -->
 
@@ -83,7 +81,7 @@
 
 			</div>
 
-		</div>
+		</div>		<!-- /.container -->
 
 	</header> <!-- /Menu Principal -->
 
@@ -94,8 +92,13 @@
 	<section class="image img-responsive" id="image1" data-stellar-background-ratio="0.30" >
 		<div class="main-title">
 			<h1>
-				Creación Profesional de Páginas Webs, Programas y Aplicaciones para Dispositivos Móviles.
-			</h1>		
+				Creación Profesional de Páginas Webs y APPs para Móviles
+				<br>
+				<p><i class="fas fa-map-marker-alt"></i> La Libertad - Provincia de Santa Elena</p>
+			</h1>	
+			<h2>
+				
+			</h2>
 		</div>			
 	</section>
 
@@ -104,84 +107,84 @@
 
 	<div class="container content" id="servicios">
 
-		<section class="row">
-			<div class="col-xs-12">
-				<article>
-					<h2><i class="fas fa-suitcase"></i> Nuestros Servicios </i></h2>
-					<div class="text-justify">
-						<p>
-							Nuestro portafolio de servicios abarca todo lo relacionado con el Desarrollo de Software haciendo principal hincapié en el mundo web.
-							Creamos diferentes soluciones de software según sus requerimientos como los que se detallan a continuación:
-							<ul>
-								<li>Páginas Webs 1.0 y 2.0 (*)</li>
-								<li>Programas/Sistemas Webs o de Escritorio (Sin conexion a internet, Offline)</li>
-								<li>Aplicaciones para dispositivos Moviles basado en Androide OS</li>
-							</ul>	
+		<div class="contorno">
+
+			<section class="row">
+				<div class="col-xs-12">
+					<article>
+						<h2 class="subtitle"><i class="fas fa-suitcase"></i> Nuestros Servicios </i></h2>
+						<div class="text-justify">
+							<p>
+								Nuestro portafolio de servicios abarca todo lo relacionado con el Desarrollo de Software haciendo principal hincapié en el mundo web.
+								Creamos diferentes soluciones de software según sus requerimientos como los que se detallan a continuación:
+								<ul>
+									<li>Páginas Webs 1.0 y 2.0 (*)</li>
+									<li>Programas/Sistemas Webs o de Escritorio (Sin conexion a internet, Offline)</li>
+									<li>Aplicaciones para dispositivos Moviles basado en Androide OS</li>
+								</ul>	
+								</p>
+							<p>
+								Nos ajustamos según su presupuesto, ya sea que necesite una sencilla Página Web Informativa para su negocio que acaba de empezar o una Aplicación de Ventas Online hecha a medida de sus necesidades. Lo asesoraremos a usted en base a sus requerimientos y presupuesto para poder ofrecerle la solución más adecuada para su caso en particular. Contáctenos sin compromiso para una atención más personalizada y poder atenderlo mejor. 
 							</p>
-						<p>
-							Nos ajustamos según su presupuesto, ya sea que necesite una sencilla Página Web Informativa para su negocio que acaba de empezar o una Aplicación de Ventas Online hecha a medida de sus necesidades. Lo asesoraremos a usted en base a sus requerimientos y presupuesto para poder ofrecerle la solución más adecuada para su caso en particular. Contáctenos sin compromiso para una atención más personalizada y poder atenderlo mejor. 
-						</p>
-						<blockquote>
-								<footer>(*) 1.0 Son páginas basados principalmente en HTML, su objetivo es netamente informativo/promocional y no incluyen Bases de Datos. Ideal para pequeña empresa que desean dar su primer paso para tener presencia en Internet (se las denomina "Páginas Estáticas" porque son relativamente sencillas). Mientras que 2.0 Son páginas mas avanzadas que ademas del HTML, requieren tecnologias de Bases de Datos como por ejemplo MySQL (se las denominan "Páginas Dinámicas")</footer>
-							</blockquote>						
-					</div>
-							
-				</article>
-			</div>
-		</section>
-		
+							<blockquote>
+									<footer>(*) 1.0 Son páginas basados principalmente en HTML, su objetivo es netamente informativo/promocional y no incluyen Bases de Datos. Ideal para pequeña empresa que desean dar su primer paso para tener presencia en Internet (se las denomina "Páginas Estáticas" porque son relativamente sencillas). Mientras que 2.0 Son páginas mas avanzadas que ademas del HTML, requieren tecnologias de Bases de Datos como por ejemplo MySQL (se las denominan "Páginas Dinámicas")</footer>
+								</blockquote>						
+						</div>
+								
+					</article>
+				</div>
+			</section>
+			
 		
 
-		<section class="row">
+			<section class="row">
 
 
-			<!-- Desarrollo Web -->
+				<!-- Desarrollo Web -->
 
-			<div class="col-xs-12 col-md-4">
-				<article>
-					<h2><i class="fas fa-code"></i> Desarrollo Web</h2>
-					<p class="text-justify">
-						Desarrollamos sitios/páginas webs ya sean de tipo básica, mediana o con acceso a Bases de Datos. Nuestro mercado esta principalmente dirigido  a  PYMES que desean dar un impulso a su emprendimiento o negocio.	
-					</p>
-				</article>
-			</div>
-
-
-
-			<!-- Aplicaciones Moviles -->
-
-			<div class="col-xs-12 col-md-4">
-				<article>
-					<h2> <i class="fab fa-android"></i> Aplicaciones Móviles</h2>
-					<p class="text-justify">
-						Desarrollamos Aplicaciones para dispositivos móviles basados en Androide OS ya sea de tipo básico o con acceso a Base de Datos.	
-					</p>
-				</article>
-			</div>
-
-
-
-			<!-- Diseño Grafico -->
-				
-			<div class="row">
 				<div class="col-xs-12 col-md-4">
 					<article>
-						<h2> <i class="fas fa-paint-brush"></i> Diseño Gráfico</h2>
+						<h2 class="subtitle"><i class="fas fa-code"></i> Desarrollo Web</h2>
+						<p class="text-justify">
+							Desarrollamos sitios/páginas webs ya sean de tipo básica, mediana o con acceso a Bases de Datos. Nuestro mercado esta principalmente dirigido  a  PYMES que desean dar un impulso a su emprendimiento o negocio.	
+						</p>
+					</article>
+				</div>
+
+
+
+				<!-- Aplicaciones Moviles -->
+
+				<div class="col-xs-12 col-md-4" >
+					<article>
+						<h2 class="subtitle"> <i class="fab fa-android"></i> Aplicaciones Móviles</h2>
+						<p class="text-justify">
+							Desarrollamos Aplicaciones para dispositivos móviles basados en Androide OS ya sea de tipo básico o con acceso a Base de Datos.	
+						</p>
+					</article>
+				</div>
+
+
+
+				<!-- Diseño Grafico -->
+				
+				<div class="col-xs-12 col-md-4">
+					<article>
+						<h2 class="subtitle"> <i class="fas fa-paint-brush"></i> Diseño Gráfico</h2>
 						<p class="text-justify">
 							Contamos con expertos en el arte del diseño para atender todos sus requerimientos.		
 						</p>
 					</article>
 				</div>
-			</div>
 
 
-		</section>
+			</section>
 
-
+		</div>
 
 		<!-- Imagen 2 -->
 
-		<section class="image" id="image2" data-stellar-background-ratio="0.30">
+		<section class="image " id="image2" data-stellar-background-ratio="0.30">
 			<div class="fondo">
 				<h2 id="quienes-somos">
 					¿Quiénes somos?
@@ -196,12 +199,12 @@
 		
 		<!-- Contactenos -->
 
-		<section>
+		<section class="contorno">
 
 			<div class="row">
 				<div class="col-xs-12">
 					<div>
-						<h2 id="contactenos" id="contactenos">Contáctenos</h2>
+						<h2 class="subtitle" id="contactenos">Contáctenos</h2>
 							<p>	
 								<i class="fas fa-map-marker-alt"></i>  La Libertad, Barrio Eugenio Espejo, Avenida 22 y Calle 15. Provincia de Santa Elena, Ecuador <br>
 								<i class="fas fa-phone"></i>  (04) 278-0870  | 
@@ -227,7 +230,7 @@
 
 				<div class="col-xs-12 col-md-6">
 					<div class="row">
-						<div class="col-xs-12 ">
+						<div class="col-xs-12 " >
 						    <form id="form_contact" method="post">					    	
 						    	<div class="form-group">
 						        	<label class="sr-only">Name:</label>
