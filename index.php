@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<title>MENDIETA</title>    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Latest compiled and minified JavaScript -->
+	<title>MENDIETA | Creación de Páginas Webs y Apps en La Libertad, Salinas y Santa Elena</title>  
+
+	<!-- Meta Tags -->
+
+	<meta charset="UTF-8">  
+	<meta name="description" content="MENDIETA Es una empresa Peninsular dedicada al Desarrollo de Software tales como páginas webs, sistemas y aplicaciones para móviles">
+	<meta name="keywords" content="paginas webs, sitios webs, aplicaciones, apps, androide, desarrollo, creacion, diseño, provincia de santa elena, peninsula de santa elena, la libertad, salinas, santa elena, economicas, profesionales, moderno, bonita">
+	<meta name="author" content="Juan Mendieta">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="distribution" content="global">
+	<meta name="robots" content="all">
+
+
+    <!-- Library's JS -->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.js" ></script>
     <script type="text/javascript" src="js/jquery.stellar.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
+
+	<!-- Library's CSS -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+
+	<!-- Estilos personalizados -->
 
 	<link href="css/styles.css" rel="stylesheet" type="text/css">
 	
@@ -29,7 +48,7 @@
 
 				<div class="col-xs-12">
 
-					<nav class="navbar navbar-inverse navbar-fixed-top" >
+					<nav class="navbar navbar-default navbar-fixed-top" >
 
 						<div id="main-menu">
 					  
@@ -50,13 +69,13 @@
 
 
 							<!-- Info de Contacto -->
-<!-- 
+
 							<p class="navbar-text ">
 								<i class="fas fa-map-marker-alt"></i> La Libertad, Ecuador | 
 								<i class="fas fa-phone"></i>  (04) 278-0870 | 
 								<i class="fas fa-mobile-alt"></i>  <i class="fab fa-whatsapp"></i> (593) 099-362-9674 					
 							</p>
- -->
+
 
 						    <!-- Opciones de Menu -->
 
@@ -284,6 +303,7 @@
 		MENDIETA. Todos los derechos reservados ©  2018
 	</footer>		
 
+	<!-- JS Personalizado -->
 	<script type="text/javascript" src="js/main.js"></script>	
 </body>
 </html>
