@@ -47,7 +47,6 @@ function inicializar()
 		   btnSend.prop('disabled', false);
 		} else{
 		   btnSend.prop('disabled', true);
-
 		}
 	});	
    
