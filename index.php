@@ -121,16 +121,15 @@
 		</div>			
 	</section>
 
-
-	<!-- Nuestros Servicios -->
-
 	<div class="container content" id="servicios">
 
 		<div class="contorno">
 
+			<!-- Nuestros Servicios -->
+
 			<section class="row">
-				<div class="col-xs-12">
-					<article>
+				<div class="col-xs-12 ">
+					<article">
 						<h2 class="subtitle"><i class="fas fa-suitcase"></i> Nuestros Servicios </i></h2>
 						<div class="text-justify">
 							<p>
@@ -162,7 +161,7 @@
 				<!-- Desarrollo Web -->
 
 				<div class="col-xs-12 col-md-4">
-					<article>
+					<article >
 						<h2 class="subtitle"><i class="fas fa-code"></i> Desarrollo Web</h2>
 						<p class="text-justify">
 							Desarrollamos sitios/páginas webs ya sean de tipo básica, mediana o con acceso a Bases de Datos. Nuestro mercado esta principalmente dirigido  a  PYMES que desean dar un impulso a su emprendimiento o negocio.	
@@ -174,8 +173,8 @@
 
 				<!-- Aplicaciones Moviles -->
 
-				<div class="col-xs-12 col-md-4" >
-					<article>
+				<div class="col-xs-12 col-md-4 " >
+					<article >
 						<h2 class="subtitle"> <i class="fab fa-android"></i> Aplicaciones Móviles</h2>
 						<p class="text-justify">
 							Desarrollamos Aplicaciones para dispositivos móviles basados en Androide OS ya sea de tipo básico o con acceso a Base de Datos.	
@@ -208,9 +207,9 @@
 				<h2 id="quienes-somos">
 					¿Quiénes somos?
 				</h2>	
-				<h3 class="text-justify">
+				<p class="text-justify">
 					Somos un equipo de profesionales especializados en el diseño y desarrollo web, estamos ubicados en el Cantón La Libertad – Provincia de Santa Elena. Nos encontramos en constante evolución, investigamos las últimas tendencias en la industria para mantenernos a la vanguardia y poderles ofrecer a ustedes una solución web a la altura de sus necesidades.				
-				</h3>
+				</p>
 			</div>
 		</section>
 
@@ -218,7 +217,7 @@
 		
 		<!-- Contactenos -->
 
-		<section class="contorno">
+		<section class="contorno contact-us">
 
 			<div class="row">
 				<div class="col-xs-12">
@@ -226,7 +225,7 @@
 						<h2 class="subtitle" id="contactenos">Contáctenos</h2>
 							<p>	
 								<i class="fas fa-map-marker-alt"></i>  La Libertad, Barrio Eugenio Espejo, Avenida 22 y Calle 15. Provincia de Santa Elena, Ecuador <br>
-								<i class="fas fa-phone"></i>  (04) 278-0870  | 
+								<i class="fas fa-phone"></i>  (04) 278-0870  <br> 
 								<i class="fas fa-mobile-alt"></i>  <i class="fab fa-whatsapp"></i> (593) 099-362-9674 
 							</p>	
 					</div>
