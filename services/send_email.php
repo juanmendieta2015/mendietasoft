@@ -9,12 +9,15 @@
 
     // Recoge datos del cliente via POST
 
-    $from_name      = ( empty($_POST["name"])       ) ? '' : $_POST["name"];
-    $from_email     = ( empty($_POST["email"])      ) ? '' : $_POST["email"];
-    $subject        = ( empty($_POST["subject"])    ) ? 'Nuevo Contacto' : $_POST["subject"];
-    $telephone      = ( empty($_POST["telephone"])  ) ? '' : $_POST["telephone"];
-    $message        = ( empty($_POST["message"])    ) ? '' : $_POST["message"]; 
-
+    $from_name      = ( empty($_POST["name"])               ) ? '' : $_POST["name"];
+    $from_email     = ( empty($_POST["email"])              ) ? '' : $_POST["email"];
+    $subject        = ( empty($_POST["subject"])            ) ? 'Nuevo Contacto' : $_POST["subject"];
+    $telephone      = ( empty($_POST["telephone"])          ) ? '' : $_POST["telephone"];
+    $message        = ( empty($_POST["message"])            ) ? '' : $_POST["message"]; 
+    $medio_contacto = ( empty($_POST["medio_contacto"])     ) ? '' : $_POST["medio_contacto"]; 
+    $hora_llamada   = ( empty($_POST["hora_llamada"])       ) ? '' : $_POST["hora_llamada"]; 
+    $tipo_producto  = ( empty($_POST["tipo_producto"])      ) ? '' : $_POST["tipo_producto"]; 
+    $rubro          = ( empty($_POST["rubro"])              ) ? '' : $_POST["rubro"]; 
 
 
     // Validacion de Datos   
@@ -60,9 +63,14 @@
         
                     <p><strong>Datos de contacto:</strong></p>
                     <ul>
-                        <li>Nombres: '      . $from_name    . '</li>
-                        <li>Telefono: '     . $telephone    . '</li>
-                        <li>Email: '        . $from_email   . '</li>
+                        <li>Nombres: '              . $from_name    . '</li>
+                        <li>Telefono: '             . $telephone    . '</li>
+                        <li>Email: '                . $from_email   . '</li>
+                        
+                        <li>Medio de Contacto: '    . $medio_contacto   . '</li>
+                        <li>Hora de Llamada: '      . $hora_llamada     . '</li>
+                        <li>Tipo de Producto: '     . $tipo_producto    . '</li>
+                        <li>Rubro/Sector: '         . $rubro            . '</li>
                     </ul>        
          
                 </div>        
@@ -98,6 +106,9 @@
     }
 
 
+
+    // Guarda un LOG en logs.txt
+
     $date       = date("Y-m-d H:i:s");
     $ip_address = $_SERVER['REMOTE_ADDR'];
     $send_succes = $success ? "El mensaje ha sido enviado por email exitosamente" : "El mensaje no se ha podido enviar por email";
@@ -109,13 +120,19 @@
         Email\t\t\t\t: {$from_email}
         Mensaje \t\t\t: {$message}
         Direccion Ip\t\t: {$ip_address}
-        Reporte de envio\t:{$send_succes}
+        Reporte de envio\t: {$send_succes}        
+        Medio de Contacto\t: {$medio_contacto}
+        Hora de Llamada\t\t: {$hora_llamada}
+        Tipo de Producto\t: {$tipo_producto}
+        Rubro/Sector\t\t: {$rubro}
         \n
     ";
 
     if (!log_save($txt)) {
         echo "3";       // 3 = No se ha podido guardar el archivo de log
     } 
+
+
 
     // Valida datos del clilente
 

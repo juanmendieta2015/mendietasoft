@@ -142,7 +142,7 @@
 								</ul>	
 								</p>
 							<p>
-								Nos ajustamos según su presupuesto, ya sea que necesite una sencilla Página Web Informativa para su negocio que acaba de empezar o una Aplicación de Ventas Online hecha a medida de sus necesidades. Lo asesoraremos a usted en base a sus requerimientos y presupuesto para poder ofrecerle la solución más adecuada para su caso en particular. Contáctenos sin compromiso para una atención más personalizada y poder atenderlo mejor. 
+								Nos ajustamos según su presupuesto, ya sea que necesite una sencilla Página Web Informativa para su negocio que acaba de empezar o una Aplicación de Ventas Online hecha a medida de sus necesidades. Lo asesoraremos a usted en base a sus requerimientos y presupuesto para poder ofrecerle la solución más adecuada para su caso en particular. <a href="#contactenos" data-ancla="contactenos"> Contáctenos </a> sin compromiso para una atención más personalizada y poder atenderlo mejor. 
 							</p>
 							<blockquote>
 									<footer>(*) 1.0 Son páginas basados principalmente en HTML, su objetivo es netamente informativo/promocional y no incluyen Bases de Datos. Ideal para pequeña empresa que desean dar su primer paso para tener presencia en Internet (se las denomina "Páginas Estáticas" porque son relativamente sencillas). Mientras que 2.0 Son páginas mas avanzadas que ademas del HTML, requieren tecnologias de Bases de Datos como por ejemplo MySQL (se las denominan "Páginas Dinámicas")</footer>
@@ -249,43 +249,142 @@
 				<div class="col-xs-12 col-md-6">
 					<div class="row">
 						<div class="col-xs-12 " >
-						    <form id="form_contact" method="post">					    	
+						    <form id="form_contact" method="post" class="text-left">		
+
+						    	<!-- Nombre -->
 						    	<div class="form-group">
 						        	<label class="sr-only">Name:</label>
 						        	<input type="text" name="name" id="name" class="form-control" placeholder="Sus Nombres" required>
-						        </div>					        
+						        </div>		
+
+						        <!-- Email -->
 						        <div class="form-group">
 						        	<label class="sr-only">E-mail: </label>
 						        	<input type="email" name="email" id="email" class="form-control" placeholder="Su E-mail" required>
-						        </div>					        
+						        </div>		
+
+						        <!-- Telefono -->
 						        <div class="form-group">
 						        	<label class="sr-only">Telephone: </label>
 						        	<input type="text" name="telephone" id="telephone" class="form-control" placeholder="Su Telefono" required>
-						        </div>					        
+						        </div>		
+
+						        <!-- Mensaje -->
 						        <div class="form-group">
 						        	<label class="sr-only">Message: </label>
 						        	<textarea name="message" id="message" class="form-control" placeholder="Su Mensaje" cols="40" rows="7" required></textarea> 
+
 						        <br>
+
+								<!-- Informacion al usuario -->
+								<div class="alert alert-info" role="alert">
+								  <div class="alert-info">Lo contactaremos en un plazo máximo de 24 horas laborales.</div>
+								</div>							        
+
+								<!-- Detalles Adicionales -->
+
+								<details>
+								  <summary>Más Detalles (medio o vía de contacto, hora de llamada, etc.)</summary>	
+
+								  	<br>					        
+
+							        <!-- Medio de Contacto -->
+							        <div class="form-group">
+							        	<label class="sr-only">¿Por qué Medio le gustaría que lo contactemos?</label>
+							        	<label>¿Por qué Medio le gustaria que lo contactemos?</label>
+						                <select id="medio_contacto" class="form-control" name="medio_contacto">
+						                    <option value="Indistinto" selected="selected">Indistinto</option>
+						                    <option value="Email">Email</option>
+						                    <option value="Telefono">Teléfono</option>
+						                </select>   
+							        </div>	
+
+							        <!-- Hora de Llamada -->
+							        <div class="form-group" id="hora_llamada">
+							        	<label class="sr-only">¿A qué Hora le gustaría que lo llamemos?</label>
+							        	<label>¿A qué Hora le gustaría que lo llamemos?</label>
+						                <select id="hora_llamada" class="form-control" name="hora_llamada">
+						                    <option value="indistinto" selected="selected">Indistinto</option>
+						                    <option value="8 AM">8 AM</option>
+						                    <option value="9 AM">9 AM</option>
+						                    <option value="10 AM">10 AM</option>
+						                    <option value="11 AM">11 AM</option>
+						                    <option value="12 AM">12 AM</option>
+						                    <option value="1 PM">1 PM</option>
+						                    <option value="2 PM">2 PM</option>
+						                    <option value="3 PM">3 PM</option>
+						                    <option value="4 PM">4 PM</option>
+						                    <option value="5 PM">5 PM</option>
+						                    <option value="6 PM">6 PM</option>
+						                    <option value="7 PM">7 PM</option>
+						                </select>   
+							        </div>	
+
+							        <!-- Tipo de Producto -->
+							        <div class="form-group">
+							        	<label class="sr-only">¿Qué Tipo de Producto necesita?</label>
+							        	<label>¿Qué Tipo de Producto necesita?</label>
+						                <select id="tipo_producto" class="form-control" name="tipo_producto">
+						                    <option value="Indistinto" selected="selected">Indistinto</option>
+						                    <option value="Página Web">Página Web</option>
+						                    <option value="App para Móviles">App para Móviles</option>
+						                    <option value="Sistema/Programa">Sistema/Programa</option>
+						                    <option value="Otro">Otro</option>
+						                </select>   
+							        </div>	
+
+							        <!-- Rubro/Sector -->
+							        <div class="form-group">
+							        	<label class="sr-only">¿Cuál es su Rubro o Sector?</label>
+							        	<label>¿Cuál es su Rubro o Sector?</label>
+						                <select id="rubro" class="form-control" name="rubro">
+						                    <option value="indistinto" selected="selected"> Indistinto</option>
+											<option value="Agricultura">Agricultura</option>
+											<option value="Alimentación, Bebidas y Tábaco">Alimentación, Bebidas y Tábaco</option>
+											<option value="Comercio">Comercio</option>
+											<option value="Construcción">Construcción</option>
+											<option value="Educación">Educación</option>
+											<option value="Energeticos">Energéticos</option>
+											<option value="Función Pública">Función Pública</option>
+											<option value="Hoteleria y Turismo">Hoteleria y Turismo</option>
+											<option value="Industrias Químicas">Industrias Químicas</option>
+											<option value="Informática y Telecomunicaciones">Informática y Telecomunicaciones</option>
+											<option value="Medios de Comunicación">Medios de Comunicación</option>
+											<option value="Minería">Minería</option>
+											<option value="Petróleo y Producción de Gas">Petróleo y Producción de Gas</option>
+											<option value="Servicios de Salud">Servicios de Salud</option>
+											<option value="Servicios Profesioanales (Financieros, Legales, etc)">Servicios Profesioanales (Financieros, Legales, etc)</option>
+											<option value="Textiles, vestidos, cuero, calzado">Textiles, vestidos, cuero, calzado</option>
+											<option value="Transportación">Transportación</option>
+											<option value="Otros">Otros</option>
+						                </select>   
+							        </div>	
+
+								</details>
+
+								<br>
+								
+								<!-- Mensaje de confirmacion	 -->
 								<div class="row">
-									<div class="col-xs-3">
+									<div class="col-xs-12">
+										<div id="resultado"></div> 
+									</div>		
+								</div>								
+
+
+								<!-- Boton "Enviar Mensaje" -->
+								<div class="row">
+									<div class="col-xs-6">
 										<button id="send" class="btn btn-success"> <i class="far fa-paper-plane"></i> Enviar Mensaje</button>		
 									</div>		
-									<div class="col-xs-9">
+									<div class="col-xs-6">
 										<div id="loader"></div>		
 									</div>	
 								</div>        
 						    </form>		
 						</div>	<!-- /.col-xs-12 -->
 					</div>	<!-- /.row -->
-
-
-					<!-- Mensaje de confirmacion	 -->
-
-					<div class="row">
-						<div class="col-xs-12">
-							<div id="resultado"></div> 
-						</div>		
-					</div>		
+		
 				</div>
 			
 			</div>

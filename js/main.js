@@ -1,6 +1,6 @@
-const ERROR_EMAIL 		= "Por favor verifique su E-mail, al parecer esta incorrecto.";
+const ERROR_EMAIL 		= "Por favor verifique su E-mail, esta incorrecto.";
 const ERROR_MESSAGE 	= "Ha ocurrido un error, su mensaje no se ha enviado. Por favor intente de nuevo.";
-const SUCCESS_MESSAGE 	= "¡Gracias por escribirnos!. Te contactaremos cuanto antes!. :)";
+const SUCCESS_MESSAGE 	= "¡Gracias por escribirnos!. Pronto te contactaremos!. :)";
 const ERROR_VALIDATION 	= "Ha ocurrido un error de validacion, por favor verifique sus datos.";
 const ERROR_SERVIDOR 	= "No se ha podido establecer conexión con el servidor.";
 
@@ -12,7 +12,6 @@ function inicializar()
 {
 	
 	// Efecto Parallax
-
 	$.stellar({
 		horizontalScrolling: false,
 		responsive: true
@@ -20,12 +19,12 @@ function inicializar()
 
 
 	// Boton enviar
-
     var btnSend = $("#send");
     btnSend.click(send);
 
 
-	$("li a").click(function(e){				
+	// Animación de los Enlaces Anclas
+	$("li a, a").click(function(e){				
 		e.preventDefault();		//evitar el eventos del enlace normal
 		var strAncla=$(this).attr('href'); //id del ancla
 			$('body,html').stop(true,true).animate({				
@@ -36,7 +35,6 @@ function inicializar()
 
 
 	// Boton "Enviar Mensaje" habilitar/desahibilitar
-
 	btnSend.prop('disabled', true);
 	$('input,textarea').keyup(function() {
 		if ( $('#name').val().length > 0 
@@ -49,7 +47,17 @@ function inicializar()
 		   btnSend.prop('disabled', true);
 		}
 	});	
-   
+
+	
+	// Muestra/Oculta la Pregunta de Hora de Llamada
+	$("#medio_contacto").change(function() {
+	 	if ( $("#medio_contacto").val() == "Email" ) {
+	 		$("#hora_llamada").hide();	 		
+	 	} else {
+	 		$("#hora_llamada").show();	 		
+	 	}
+	 });
+
 }
 
 
@@ -59,10 +67,14 @@ function inicializar()
 function send()
 {
 
-    var name 		= $("#name").val();
-    var email 		= $("#email").val();
-    var telephone 	= $("#telephone").val();
-    var message 	= $("#message").val();
+    var name 			= $("#name").val();
+    var email 			= $("#email").val();
+    var telephone 		= $("#telephone").val();
+    var message 		= $("#message").val();
+    var medio_contacto 	= $("#medio_contacto").val();
+    var hora_llamada 	= $("#hora_llamada").val();
+    var tipo_producto 	= $("#tipo_producto").val();
+    var rubro 			= $("#rubro").val();
 
 
     // Validacion de los datos del usuario
@@ -93,8 +105,11 @@ function send()
         	"name=" + name + 
         	"&email=" + email + 
         	"&telephone=" + telephone +
-        	"&message=" + message, 
-
+        	"&message=" + message + 
+        	"&medio_contacto=" + medio_contacto +
+        	"&hora_llamada=" + hora_llamada + 
+        	"&tipo_producto=" + tipo_producto + 
+        	"&rubro=" + rubro, 
         beforeSend:inicioEnvio,
         success: llegada,
         error: problemas
@@ -144,7 +159,7 @@ function llegada(datos)
 	    // 1: Envio satisfactorio
 
 	    case '1':
-		    var response = '<div class="alert alert-info alert-dismissible" role="alert">' +
+		    var response = '<div class="alert alert-success alert-dismissible" role="alert">' +
 		    					'<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
 		    						'<span aria-hidden="true">&times;</span>' +
 		    					'</button>' +
