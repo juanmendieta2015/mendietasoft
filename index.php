@@ -1,3 +1,35 @@
+<?php
+    date_default_timezone_set('America/Guayaquil');
+    include_once("services/Conexion.php");
+    include_once("services/config.inc.php");
+
+    saveLog();
+
+    // Guarda un log de visita a la home
+    function saveLog()
+    {
+	    $conn = new Conexion(DB_SERVER, DB_USER, DB_PASS, DB_DATABASE);
+	    $link = $conn->connect();
+
+	    $date       = date("Y-m-d H:i:s");
+	    $ip_address = $_SERVER['REMOTE_ADDR'];
+	    $browser    = $_SERVER['HTTP_USER_AGENT'];
+
+	    $sql = "INSERT INTO log_home (fecha, ip_address, browser)
+	    VALUES ('{$date}',  '{$ip_address}', '{$browser}')";
+
+	    if ($link->query($sql) === TRUE) {
+	        // echo "New record created successfully";
+	    } else {
+	        echo "Error: " . $sql . "<br>" . $link->error;
+	    }
+
+	    $link->close();
+	}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -19,7 +51,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.js" ></script>
-    <script type="text/javascript" src="js/jquery.stellar.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery.stellar.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.2/jquery.stellar.min.js" ></script>
+
 
 
 	<!-- Library's CSS -->
@@ -34,6 +68,17 @@
 
 	<link href="css/styles.css" rel="stylesheet" type="text/css">
 	
+
+	<!-- Publicidad -->
+<!-- 	
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+	  (adsbygoogle = window.adsbygoogle || []).push({
+	    google_ad_client: "ca-pub-8187489503971577",
+	    enable_page_level_ads: true
+	  });
+	</script>
+ -->
 
 </head>
 <body>
@@ -111,9 +156,11 @@
 	<section class="image img-responsive" id="image1" data-stellar-background-ratio="0.30" >
 		<div class="main-title">
 			<h1>
-				Creación Profesional de Páginas Webs y APPs para Móviles
+				Creación de Páginas Webs y APPs para Móviles
 				<br>
-				<p><i class="fas fa-map-marker-alt"></i> La Libertad - Provincia de Santa Elena</p>
+				<!-- <p> -->
+					<i class="fas fa-map-marker-alt"></i> La Libertad / Salinas / Santa Elena
+				<!-- </p> -->
 			</h1>	
 			<h2>
 				
@@ -145,7 +192,7 @@
 								Nos ajustamos según su presupuesto, ya sea que necesite una sencilla Página Web Informativa para su negocio que acaba de empezar o una Aplicación de Ventas Online hecha a medida de sus necesidades. Lo asesoraremos a usted en base a sus requerimientos y presupuesto para poder ofrecerle la solución más adecuada para su caso en particular. <a href="#contactenos" data-ancla="contactenos"> Contáctenos </a> sin compromiso para una atención más personalizada y poder atenderlo mejor. 
 							</p>
 							<blockquote>
-									<footer>(*) 1.0 Son páginas basados principalmente en HTML, su objetivo es netamente informativo/promocional y no incluyen Bases de Datos. Ideal para pequeña empresa que desean dar su primer paso para tener presencia en Internet (se las denomina "Páginas Estáticas" porque son relativamente sencillas). Mientras que 2.0 Son páginas mas avanzadas que ademas del HTML, requieren tecnologias de Bases de Datos como por ejemplo MySQL (se las denominan "Páginas Dinámicas")</footer>
+									<footer>(*) 1.0 Son páginas basados principalmente en HTML, su objetivo es netamente informativo/promocional y no incluyen Bases de Datos. Ideal para pequeña empresa que desean dar su primer paso para tener presencia en Internet (se las denomina "Páginas Estáticas" porque son relativamente sencillas). Mientras que 2.0 Son páginas mas avanzadas que además del HTML, requieren tecnologias de Bases de Datos como por ejemplo MySQL (se las denominan "Páginas Dinámicas")</footer>
 								</blockquote>						
 						</div>
 								
@@ -239,9 +286,8 @@
 
 				<div class="col-xs-12 col-md-6">
 					
-					<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d31894.29792324762!2d-80.91592984550776!3d-2.2335067203773247!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sec!4v1525836572295" width = "100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>		
+					<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d31894.29792324762!2d-80.91592984550776!3d-2.2335067203773247!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sec!4v1525836572295" width = "100%" height="470" frameborder="0" style="border:0" allowfullscreen></iframe>		
 
-					<!-- width="550" height="350"			 -->
 				</div>
 				
 				<!-- Formulario de Contacto -->
@@ -266,7 +312,7 @@
 						        <!-- Telefono -->
 						        <div class="form-group">
 						        	<label class="sr-only">Telephone: </label>
-						        	<input type="text" name="telephone" id="telephone" class="form-control" placeholder="Su Telefono" required>
+						        	<input type="text" name="telephone" id="telephone" class="form-control" placeholder="Su Teléfono" required>
 						        </div>		
 
 						        <!-- Mensaje -->
@@ -277,14 +323,17 @@
 						        <br>
 
 								<!-- Informacion al usuario -->
-								<div class="alert alert-info" role="alert">
-								  <div class="alert-info">Lo contactaremos en un plazo máximo de 24 horas laborales.</div>
+								<div class="alert alert-info text-center" role="alert">
+								  <div class="alert-info"> 
+								  	<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+								  	Lo contactaremos en un plazo máximo de 24 horas laborales.
+								  </div>
 								</div>							        
 
 								<!-- Detalles Adicionales -->
 
 								<details>
-								  <summary>Más Detalles (medio o vía de contacto, hora de llamada, etc.)</summary>	
+								  <summary > Más Detalles (medio de contacto, hora de llamada, etc.)</summary>	
 
 								  	<br>					        
 
@@ -295,16 +344,17 @@
 						                <select id="medio_contacto" class="form-control" name="medio_contacto">
 						                    <option value="Indistinto" selected="selected">Indistinto</option>
 						                    <option value="Email">Email</option>
-						                    <option value="Telefono">Teléfono</option>
+						                    <option value="Teléfono">Teléfono</option>
 						                </select>   
 							        </div>	
 
 							        <!-- Hora de Llamada -->
-							        <div class="form-group" id="hora_llamada">
+							        <div class="form-group" id="hora_llamada_pregunta">
 							        	<label class="sr-only">¿A qué Hora le gustaría que lo llamemos?</label>
 							        	<label>¿A qué Hora le gustaría que lo llamemos?</label>
 						                <select id="hora_llamada" class="form-control" name="hora_llamada">
-						                    <option value="indistinto" selected="selected">Indistinto</option>
+						                    <option value="Indistinto" selected="selected">Indistinto</option>
+						                    <option value="No Aplica">No Aplica</option>
 						                    <option value="8 AM">8 AM</option>
 						                    <option value="9 AM">9 AM</option>
 						                    <option value="10 AM">10 AM</option>
@@ -338,7 +388,7 @@
 							        	<label class="sr-only">¿Cuál es su Rubro o Sector?</label>
 							        	<label>¿Cuál es su Rubro o Sector?</label>
 						                <select id="rubro" class="form-control" name="rubro">
-						                    <option value="indistinto" selected="selected"> Indistinto</option>
+						                    <option value="Indistinto" selected="selected"> Indistinto</option>
 											<option value="Agricultura">Agricultura</option>
 											<option value="Alimentación, Bebidas y Tábaco">Alimentación, Bebidas y Tábaco</option>
 											<option value="Comercio">Comercio</option>
@@ -353,7 +403,7 @@
 											<option value="Minería">Minería</option>
 											<option value="Petróleo y Producción de Gas">Petróleo y Producción de Gas</option>
 											<option value="Servicios de Salud">Servicios de Salud</option>
-											<option value="Servicios Profesioanales (Financieros, Legales, etc)">Servicios Profesioanales (Financieros, Legales, etc)</option>
+											<option value="Servicios Profesionales (Financieros, Legales, etc)">Servicios Profesionales (Financieros, Legales, etc)</option>
 											<option value="Textiles, vestidos, cuero, calzado">Textiles, vestidos, cuero, calzado</option>
 											<option value="Transportación">Transportación</option>
 											<option value="Otros">Otros</option>
@@ -413,12 +463,12 @@
     $browser = $_SERVER['HTTP_USER_AGENT'];
 
 
-    $txt = "
-        Fecha\t\t\t\t: {$date}
-        Direccion Ip\t\t: {$ip_address}
-        browser\t\t\t\t: {$browser}
-        \n
-    ";
+    $txt = 
+"
+Fecha\t\t\t: {$date}
+Direccion Ip\t\t: {$ip_address}
+Browser\t\t\t: {$browser}
+";
 
 	log_save($txt);
 

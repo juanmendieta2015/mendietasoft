@@ -17,49 +17,31 @@ function inicializar()
 		responsive: true
 	});
 
-
 	// Boton enviar
     var btnSend = $("#send");
+
+    // Enviar Formulario de Contacto
     btnSend.click(send);
 
-
 	// Animación de los Enlaces Anclas
-	$("li a, a").click(function(e){				
-		e.preventDefault();		//evitar el eventos del enlace normal
-		var strAncla=$(this).attr('href'); //id del ancla
-			$('body,html').stop(true,true).animate({				
-				scrollTop: $(strAncla).offset().top
-			},1000);
-		
-	});
+	$("li a, a").click(anclasAnimation);
 
-
-	// Boton "Enviar Mensaje" habilitar/desahibilitar
+	// Desactiva por default botón "Enviar Mensaje" 
 	btnSend.prop('disabled', true);
-	$('input,textarea').keyup(function() {
-		if ( $('#name').val().length > 0 
-			&& $('#email').val().length > 0  
-			&& $('#telephone').val().length > 0 
-			&& $('#message').val().length > 0 
-		) {
-		   btnSend.prop('disabled', false);
-		} else{
-		   btnSend.prop('disabled', true);
-		}
-	});	
 
+	// Activa/Desactiva botón "Enviar Mensaje"
+	$('input,textarea').keyup(enableDisableButtom);	
+
+	// Oculta del Dropdown "Hora" la opción "No Aplica" 
+	//(ya que es para manejo interno, el usuario de debe ver esta opción)
+	$("#hora_llamada option[value='No Aplica']").hide();
 	
-	// Muestra/Oculta la Pregunta de Hora de Llamada
-	$("#medio_contacto").change(function() {
-	 	if ( $("#medio_contacto").val() == "Email" ) {
-	 		$("#hora_llamada").hide();	 		
-	 	} else {
-	 		$("#hora_llamada").show();	 		
-	 	}
-	 });
+	// Setea valores para la pregunta "Hora de llamada..."
+	$("#medio_contacto").change(setHour);
+
+	// $("#hora_llamada").change(read_data);
 
 }
-
 
 
 // Invoca el servicio para enviar el email
@@ -89,6 +71,7 @@ function send()
 	    					'<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
 	    						'<span aria-hidden="true">&times;</span>' + 
 	    					'</button>' +
+	    					'<span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span> ' +
 	    					'<strong>Error! </strong>' + ERROR_EMAIL +
 	    				'</div>';
 	    $("#resultado").html(response);     	
@@ -149,6 +132,7 @@ function llegada(datos)
 		    					'<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
 		    						'<span aria-hidden="true">&times;</span>' +
 		    					'</button>' +
+		    					'<span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span> ' +
 		    					'<strong>Error! </strong>' + ERROR_MESSAGE +
 		    				'</div>';
 
@@ -163,6 +147,7 @@ function llegada(datos)
 		    					'<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
 		    						'<span aria-hidden="true">&times;</span>' +
 		    					'</button>' +
+		    					'<span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ' +
 		    					SUCCESS_MESSAGE +
 		    				'</div>';
 
@@ -177,6 +162,7 @@ function llegada(datos)
 		    					'<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
 		    						'<span aria-hidden="true">&times;</span>' +
 		    					'</button>' +
+		    					'<span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span> ' +
 		    					'<strong>Error! </strong>' + ERROR_VALIDATION +
 		    				'</div>';
 
@@ -197,6 +183,7 @@ function problemas()
     							'<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
     								'<span aria-hidden="true">&times;</span>' +
     							'</button>' +
+    							'<span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span> ' +
     							'<strong>Error! </strong>' + ERROR_SERVIDOR +
     						'</div>';
     $("#resultado").html(response_success)  
@@ -208,4 +195,54 @@ function validateEmail(email)
 {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
+}
+
+
+// Animación de los Enlaces Anclas
+function anclasAnimation(e){
+	e.preventDefault();		//evitar el eventos del enlace normal
+	var strAncla=$(this).attr('href'); //id del ancla
+		$('body,html').stop(true,true).animate({				
+			scrollTop: $(strAncla).offset().top
+		},1000);
+}
+
+// Activa/Desactiva botón "Enviar Mensaje"
+function enableDisableButtom(){
+
+	let name 		= $("#name");
+	let email 		= $("#email");
+	let telephone 	= $("#telephone");
+	let message 	= $("#message");
+	let btnEnviar 	= $("#send");
+
+	if ( name.val().length > 0 
+		&& email.val().length > 0  
+		&& telephone.val().length > 0 
+		&& message.val().length > 0 
+	) {
+	   btnEnviar.prop('disabled', false);
+	} else{
+	   btnEnviar.prop('disabled', true);
+	}
+}
+
+// function read_data(){
+// 	console.log( $("#medio_contacto").val() + $("#hora_llamada").val() );
+// }
+
+// Setea valores para la pregunta "Hora de Llamada..."
+function setHour(){
+	let medio_contacto 			= $("#medio_contacto");
+	let hora_llamada 			= $("#hora_llamada");
+	let hora_llamada_pregunta 	= $("#hora_llamada_pregunta");
+
+ 	if ( medio_contacto.val() == "Email" ) {		
+ 		hora_llamada.val("No Aplica");
+ 		hora_llamada_pregunta.hide();	
+ 	} else {	 		
+ 		hora_llamada_pregunta.show();	 		
+ 		hora_llamada.val("Indistinto");
+ 	}
+ 	// read_data();
 }

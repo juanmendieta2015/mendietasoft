@@ -113,20 +113,20 @@
     $ip_address = $_SERVER['REMOTE_ADDR'];
     $send_succes = $success ? "El mensaje ha sido enviado por email exitosamente" : "El mensaje no se ha podido enviar por email";
 
-    $txt = "
-        Fecha\t\t\t\t: {$date}
-        Name\t\t\t\t: {$from_name}
-        Telefono\t\t\t: {$telephone}
-        Email\t\t\t\t: {$from_email}
-        Mensaje \t\t\t: {$message}
-        Direccion Ip\t\t: {$ip_address}
-        Reporte de envio\t: {$send_succes}        
-        Medio de Contacto\t: {$medio_contacto}
-        Hora de Llamada\t\t: {$hora_llamada}
-        Tipo de Producto\t: {$tipo_producto}
-        Rubro/Sector\t\t: {$rubro}
-        \n
-    ";
+    $txt = 
+"
+Fecha\t\t\t: {$date}
+Name\t\t\t: {$from_name}
+Telefono\t\t: {$telephone}
+Email\t\t\t: {$from_email}
+Mensaje \t\t: {$message}
+Direccion Ip\t\t: {$ip_address}
+Reporte de envio\t: {$send_succes}        
+Medio de Contacto\t: {$medio_contacto}
+Hora de Llamada\t\t: {$hora_llamada}
+Tipo de Producto\t: {$tipo_producto}
+Rubro/Sector\t\t: {$rubro}
+";
 
     if (!log_save($txt)) {
         echo "3";       // 3 = No se ha podido guardar el archivo de log
