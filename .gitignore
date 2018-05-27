@@ -5,3 +5,4 @@ services/logs.txt
 services/log.php
 services/constants.php
 visitor_logs.txt
+services/config.inc.php
